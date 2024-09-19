@@ -1,5 +1,11 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+import os
+
+if __name__ == "__main__":
+    # Get the port from the environment variable or default to 8000 for local testing
+    port = int(os.getenv("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
 
 app = FastAPI()
 

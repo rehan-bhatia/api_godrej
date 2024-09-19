@@ -9,6 +9,7 @@ if __name__ == "__main__":
 
 app = FastAPI()
 
+'''
 price_list = {
     "1A": 55,  # Price for item 1
     "1B": 55,  # Price for item 2
@@ -47,3 +48,8 @@ async def calculate_total(quantity: QuantityRequest):
              quantity.quantity_3C * price_list["3C"])
     
     return {"totalAmount": total}
+'''
+
+@app.get("/")
+def read_root():
+    return {"status": "working"}

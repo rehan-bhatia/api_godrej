@@ -3,6 +3,10 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
+if __name__ == "__main__":
+    port = int(os.getenv("PORT", 8000))  # Use the PORT environment variable, default to 8000 for local testing
+    uvicorn.run(app, host="0.0.0.0", port=port)
+
 price_list = {
     "1A": 55,  # Price for item 1
     "1B": 55,  # Price for item 2

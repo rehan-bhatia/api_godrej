@@ -1,1 +1,1 @@
-web: uvicorn api_godrej:app --host=0.0.0.0 --port=1000
+web: uvicorn api_godrej:app --host=0.0.0.0 --port=${PORT}
